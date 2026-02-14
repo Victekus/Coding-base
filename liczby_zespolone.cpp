@@ -22,4 +22,17 @@ public:
             cout << rzeczywista << " - " << (-urojona) << "i";
     }
 };    
-
+int main() {
+    LiczbaZespolona z1(3, 4);   // 3 + 4i
+    LiczbaZespolona z2(1, 2);   // 1 + 2i
+    
+    cout << "Liczba 1: ";
+    z1.wyswietl();
+    cout << "\n";
+    
+    cout << "Liczba 2: ";
+    z2.wyswietl();
+    cout << "\n";
+    
+    return 0;
+}
