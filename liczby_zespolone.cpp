@@ -21,18 +21,27 @@ public:
         else
             cout << rzeczywista << " - " << (-urojona) << "i";
     }
+	LiczbaZespolona operator+(const LiczbaZespolona& druga) {
+        // Dodajemy rzeczywiste do rzeczywistych, urojone do urojonych
+        return LiczbaZespolona(this->rzeczywista + druga.rzeczywista, 
+                               this->urojona + druga.urojona);
+    }
+	LiczbaZespolona operator*(const LiczbaZespolona& druga) {
+    return LiczbaZespolona(
+        (this->rzeczywista * druga.rzeczywista) - (this->urojona * druga.urojona), // Nowa rzeczywista
+        (this->rzeczywista * druga.urojona) + (this->urojona * druga.rzeczywista)  // Nowa urojona
+    );
+}
+	}
 };    
 int main() {
     LiczbaZespolona z1(3, 4);   // 3 + 4i
     LiczbaZespolona z2(1, 2);   // 1 + 2i
-    
-    cout << "Liczba 1: ";
-    z1.wyswietl();
-    cout << "\n";
-    
-    cout << "Liczba 2: ";
-    z2.wyswietl();
-    cout << "\n";
-    
+    // Używamy naszego przeciążonego operatora!
+    LiczbaZespolona z3 = z1 + z2; 
+
+    cout << "Liczba 1: "; z1.wyswietl(); cout << endl;
+    cout << "Liczba 2: "; z2.wyswietl(); cout << endl;
+    cout << "Suma (z1 + z2): "; z3.wyswietl(); cout << endl;
     return 0;
 }
