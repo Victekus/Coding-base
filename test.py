@@ -21,5 +21,10 @@ def dobierzkolor(allreults,cycle):
 #print (len(x))
 y= dobierzkolor(x, len(x))
 red, green, blue = zip(y)
+
+red = abs(int(red[0]) * 20)
+green = abs(int(green[0]) * 20)
+blue = abs(int(blue[0]) * 20)
+
 print(red, green, blue)
 print(f"\033[38;2;{red};{green};{blue}m■ THIS TEXT IS RANDOMLY COLORED! \033[0m")
