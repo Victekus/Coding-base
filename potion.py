@@ -3,8 +3,6 @@ import vektory
 import numpy as np
 
 
-
-
 x = vektory.collect_color_elements()
 def dobierzkolor(allreults,cycle):
     tablica = allreults

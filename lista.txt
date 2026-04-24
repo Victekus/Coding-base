@@ -16,3 +16,4 @@ maczeta
 siekiera
 deska
 piłka
+bombka
