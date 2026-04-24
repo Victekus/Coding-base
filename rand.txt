@@ -1,6 +1,0 @@
-if i%3==0:
-            red = red + int(dlugosc)
-        elif i%3==1:
-            green = green + int(dlugosc)
-        elif i%3==2:
-            blue = blue + int(dlugosc)
