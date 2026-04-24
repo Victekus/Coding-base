@@ -12,4 +12,7 @@ kot
 woda
 ogien
 ziemia
-
+maczeta
+siekiera
+deska
+piłka
